@@ -44,7 +44,7 @@ body {
 }
 .wrapper {
   position: absolute;
-  height: 310px;
+  height: 265px;
   max-width: 410px;
   background: rgb(141, 110, 182);
   border-radius: 7px;
@@ -153,14 +153,15 @@ button:hover {
   }
 }
 .a {
-  width: 200px;
+  width: 161px;
   color: #ecf0f1;
   text-align: center;
-  margin-left: 75px;
+  margin-left: 91px;
+  margin-bottom: 30px;
   border: #c4b5fd solid 2px;
-  padding: 1px;
-  margin-top: 10px;
-  border-radius: 1000px;
+  padding: 0px;
+  margin-top: 7px;
+  border-radius: 100px;
   transition: all 1s;
 }
 a {
