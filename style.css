@@ -44,7 +44,7 @@ body {
 }
 .wrapper {
   position: absolute;
-  height: 265px;
+  height: 277px;
   max-width: 410px;
   background: rgb(141, 110, 182);
   border-radius: 7px;
@@ -53,7 +53,7 @@ body {
   box-shadow: 0 5px 30px rgba(147, 69, 69);
 }
 .wrapper.active {
-  height: 530px;
+  height: 545px;
 }
 header h1 {
   font-family: sans-serif;
@@ -159,7 +159,8 @@ button:hover {
   margin-left: 75px;
   border: #c4b5fd solid 2px;
   padding: 1px;
-  margin-top: 10px;
+  margin-top: 15px;
+  
   border-radius: 1000px;
   transition: all 1s;
 }
