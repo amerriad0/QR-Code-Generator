@@ -100,7 +100,7 @@ header p {
   margin-top: 20px;
   font-size: 17px;
   background-color: rgb(141, 110, 182);
-  border: 2px solid #95a5a6;
+  border: 2px solid #c4b5fd;
   transition: all 0.7s;
   animation: color 10s forwards alternate;
 }
@@ -136,8 +136,8 @@ button:hover {
 
 @media (max-width: 430px) {
   .wrapper {
-    height: 250px;
-    padding: 16px 20px;
+    height: 251px;
+    padding: 8px 20px;
   }
   .wrapper.active {
     height: 510px;
@@ -156,11 +156,11 @@ button:hover {
   width: 161px;
   color: #ecf0f1;
   text-align: center;
-  margin-left: 98px;
+  margin-left: 91px;
   margin-bottom: 30px;
   border: #c4b5fd solid 2px;
   padding: 0px;
-  margin-top: 7px;
+  margin-top: 13px;
   border-radius: 100px;
   transition: all 1s;
 }
