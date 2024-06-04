@@ -44,8 +44,9 @@ body {
 }
 .wrapper {
   position: absolute;
-  height: 265px;
-  max-width: 410px;
+  height: 300px;
+  width: 400px;
+  max-width: 500px;
   background: rgb(141, 110, 182);
   border-radius: 7px;
   padding: 20px 25px 0;
@@ -53,7 +54,7 @@ body {
   box-shadow: 0 5px 30px rgba(147, 69, 69);
 }
 .wrapper.active {
-  height: 530px;
+  height: 550px;
 }
 header h1 {
   font-family: sans-serif;
@@ -72,7 +73,7 @@ header p {
 .wrapper .form {
   margin: 20px 0 25px;
 }
-.form :where(input, button) {
+.form :where(button) {
   width: 100%;
   height: 55px;
   border: none;
@@ -81,7 +82,7 @@ header p {
   transition: 0.1s ease;
 }
 
-.form input {
+/* .form input {
   background-color: #e9d5ff;
   font-size: 18px;
   padding: 0 17px;
@@ -93,8 +94,8 @@ header p {
 }
 .form input::placeholder {
   color: #343333;
-}
-.form button {
+} */
+.bot {
   color: #ecf0f1;
   cursor: pointer;
   margin-top: 20px;
@@ -136,11 +137,11 @@ button:hover {
 
 @media (max-width: 430px) {
   .wrapper {
-    height: 251px;
+    height: 264px;
     padding: 8px 20px;
   }
   .wrapper.active {
-    height: 510px;
+    height: 555px;
   }
   header p {
     color: #000000;
@@ -156,7 +157,7 @@ button:hover {
   width: 161px;
   color: #ecf0f1;
   text-align: center;
-  margin-left: 98px;
+  margin-left: 91px;
   margin-bottom: 30px;
   border: #c4b5fd solid 2px;
   padding: 0px;
@@ -175,4 +176,157 @@ a:hover {
 
 .a:hover {
   transform: scale(1.1);
+}
+
+.wave-group {
+  position: relative;
+}
+
+.wave-group .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  height: 55px;
+  border: none;
+  border-bottom: 1px solid #c4b5fd;
+  background: transparent;
+}
+
+.wave-group .input:focus {
+  outline: none;
+}
+
+.wave-group .label {
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+
+.wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * 0.05s);
+}
+
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: white;
+}
+
+.wave-group .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.wave-group .bar:before,
+.wave-group .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #c4b5fd;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+  left: 50%;
+}
+
+.wave-group .bar:after {
+  right: 50%;
+}
+
+.wave-group .input:focus ~ .bar:before,
+.wave-group .input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* insta */
+
+.Btn {
+  margin-top: 11px;
+  width: 45px;
+  margin-left: 151px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  z-index: -1;
+  border-radius: 9px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
 }
